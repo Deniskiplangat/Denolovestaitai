@@ -8,7 +8,7 @@
     display: none;
 }
 .animate{
-    position: relative;
+    position: absolute;
     display: flex;
     
     justify-content: center;
