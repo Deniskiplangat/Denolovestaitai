@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.active{
+    display: none;
+}
+.animate{
+    position: absolute;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: rgb(43, 21, 0);
+    font-size: 2em;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Oleo Script', system-ui;
+    font-family: 'Skranji', system-ui;
+    text-align: center;
+
+    animation: animate 7s ease 1 normal forwards;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+.picture{
+    position: absolute;
+    background-color: pink;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    z-index: -10;
+    animation: ball 2s ease 1 normal none,fade 2s ease-out 1 normal none;
+
+   
+
+
+}
+.love{
+    width: 100px;
+    height: 100px;
+    
+    position: absolute;
+    left: 90px;
+    top: 120px;
+    background: url(/candle-svgrepo-com.svg);
+    background-size: 100px 100px;
+    transform: rotate(-45deg);
+}
+.candle{
+    position: absolute;
+    left: 90px;
+    top: 120px;
+    background: url(/candle-svgrepo-com.svg);
+    background-size: 100% 100%;
+    transform: rotate(-45deg);
+}
+.heart{
+    position: absolute;
+    left: 200px;
+    top: 70px;
+    background: url(/envelope-svgrepo-com.svg);
+    background-size: 100% 100%;
+    transform: rotate(45deg);
+}
+.dialog{
+    position: absolute;
+    left: 150px;
+    top: 300px;
+    background: url(dialog-box-svgrepo-com.svg);
+    background-size: 100% 100%;
+    transform: rotate(45deg);
+}
+.heartlove{
+    position: absolute;
+    left: -10px;
+    top: 50px;
+    background: url(love-svgrepo-com.svg);
+    background-size: 100% 100%;
+    transform: rotate(-10deg);
+}
+
+
+@keyframes ball{
+    
+    from{
+      transform: translateX(-700px);
+    }
+    to{
+      transform: translateX(0px);
+    }
+}
+@keyframes animate{
+    
+    0% { 
+        opacity: 1; 
+      } 
+      50% { 
+        opacity: 0.5; 
+      }
+      100% { 
+        opacity: 0; 
+      }
+}
+
+
+@keyframes slidein{
+    
+    from{
+      transform: translateY(-300px);
+    }
+    to{
+      transform: translateY(0px);
+    }
+}
+
+@keyframes fade{
+    
+    0% { 
+        opacity: 0; 
+      } 
+      50% { 
+        opacity: 0.5; 
+      } 
+      90% { 
+        opacity: 1; 
+      } 
+     
+}
+
+.headingone{
+    animation: slidein 2s ease 1 normal none,fade 2s ease 1 normal none;
+    
+}
+
+@media (min-width: 320px) {  
+    .picture {
+        
+        width: 300px;
+        height: 300px;
+    }
+    .dialog{
+        left: 90px;
+        top: 240px;
+    }
+  }
+
